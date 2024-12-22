@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMR Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="Login.html" class="logo"><ion-icon name="car-sport"></ion-icon>BookMyRide</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Features</a></li>
+                <li><a href="#services">Help</a></li>
+                <li><a href="FAQs.html" target="_blank">FAQs</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="content">
+            <h2>Let's make a journey...</h2>
+            <p>Log in now to unlock a world of seamless car reservations - fast, easy, and ready to drive you anywhere
+                you want to go!</p>
+        </div>
+        <div class="wrapper-login">
+            <h2>Login Yourself</h2>
+            <form id="login-form">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon>
+                        <input id="email" type="email" required> <label for="">Enter your email</label>
+                    </span>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon>
+                        <input id="password" type="password" required> <label for="">Enter password</label>
+                    </span>
+                </div>
+                <div class="remeber-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <a href="BMR.html"> <button type="submit" class="btn">Login</button></a>
+                <div class="register-link">
+                    <p>Not a member?
+                        <a href="#">Sign Up</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <div class="help-hero">
+        <h1>How can we help?</h1>
+        <p>Find answers to your questions about <code>BookMyRide</code> </p>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input id="search-input" type="text" placeholder="Search help articles" aria-label="Search">
+            <button id="search-btn" type="button">Search</button>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#login-form").on("submit", function (event) {
+                event.preventDefault(); // Prevent form submission
+
+                // Get user inputs
+                const email = $("#email").val();
+                const password = $("#password").val();
+
+                // Show alert with user input
+                alert(`Login Successful!\n\nEmail: ${email}\nPassword: ${password}`);
+
+                // Redirect to another page after alert
+                setTimeout(function () {
+                    window.location.href = "BMR.html";
+                }, 100); // Slight delay to ensure the alert is displayed
+            });
+        });
+    </script>
+
+</body>
+
+
+<style>
+    .container {
+        margin-top: 50px;
+    }
+
+
+
+    .category-card {
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .category-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .category-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .category-card h5 {
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
+    }
+
+    footer {
+        margin-top: 50px;
+        text-align: center;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-top: 1px solid #ddd;
+    }
+</style>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+
+
+
+    <script>
+        $(document).ready(function () {
+            // Handle search button click
+            $('#search-btn').on('click', function () {
+                const query = $('#search-input').val();
+                if (query) {
+                    alert(`You are searching for: ${query}. You will get your answer soon. Stay connected. THANK YOU.`);
+                } else {
+                    alert('Please enter a search query.');
+                }
+            });
+
+            // Add smooth scrolling to category links (if implemented in the future)
+            $('a').on('click', function (event) {
+                if (this.hash) {
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: $(this.hash).offset().top
+                    }, 800);
+                }
+            });
+        });
+    </script>
+
+    <!-- About us  -->
+
+
+    <!-- About Section -->
+    <section id="about" class="container my-5">
+        <h2 class="text-center section-header" style="text-align: center;">About Us</h2>
+        <div class="row">
+            <!-- <div class="col-md-6">
+            <img src="https://cabsrental.in/wp-content/uploads/2020/12/Untitled6-3.png" alt="Luxury Cars" class="img-fluid rounded">
+        </div> -->
+
+            <div class="col-md-6">
+                <h3>Our Mission</h3>
+                <p>
+                    At <strong>BookMyRide</strong>, we specialize in providing top-notch vehicle reservation services to
+                    meet your travel needs. With a diverse fleet and exceptional customer service, we strive to make
+                    your journey smooth and memorable.
+                </p>
+                <ul>
+                    <li>Wide range of premium vehicles</li>
+                    <li>24/7 customer support</li>
+                    <li>Transparent pricing with no hidden costs</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values" class="container my-5">
+        <h2 class="text-center section-header">Our Core Values</h2>
+        <div class="row text-center">
+            <div class="col-md-4 values-card">
+                <i class="fas fa-star fa-3x"></i>
+                <h4 class="mt-3">Excellence</h4>
+                <p>We prioritize quality in every aspect of our service.</p>
+            </div>
+            <div class="col-md-4 values-card">
+                <i class="fas fa-handshake fa-3x"></i>
+                <h4 class="mt-3">Integrity</h4>
+                <p>We operate with honesty and transparency at all times.</p>
+            </div>
+            <div class="col-md-4 values-card">
+                <i class="fas fa-users fa-3x"></i>
+                <h4 class="mt-3">Customer Focus</h4>
+                <p>Your satisfaction is our top priority.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container my-5">
+        <h2 class="text-center section-header">What Our Customers Say</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="testimonial">
+                    <p>" <b>BookMyRide</b> exceeded my expectations! The booking process was simple, and the car was in
+                        perfect condition. Highly recommend!"</p>
+                    <p><strong>- Surbhi</strong></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="testimonial">
+                    <p>"I needed a car last minute for a business trip, and <b>BookMyRide</b> came through. Exceptional
+                        service and great prices!"</p>
+                    <p><strong>- Bhagyam Sharma</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <style>
+        .product-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .product {
+            width: 400px;
+            padding: 20px;
+            border: 10px solid #333;
+            margin: 15px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-size: 16px;
+            color: darkslategray;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 style="text-align: center; color: #007bff;">Our team-members</h1>
+
+            <div class="product-container">
+                <div class="product">
+                    <img src="MyPicSC.jpg.png" height="200px" alt="AppleProduct" class="product-image">
+                    <p class="product-description">
+                    <h3>Debajyoti Bhakta</h3> Reg no. 2341002155</p>
+                </div>
+                <div class="product">
+                    <img src="Monu.jpg.png" height="200px" alt="AppleProduct" class="product-image">
+                    <p class="product-description">
+                    <h3>MONU KUMAR</h3> Reg no. 2341011316</p>
+                </div>
+                <div class="product">
+                    <img src="Adyasha.png" height="200px" alt=" Mac" class="product-image">
+                    <p class="product-description">
+                    <h3>Adyasha Panigrahi </h3> Reg no. 2341016145.</p>
+                </div>
+                <div class="product">
+                    <img src="Aditya.jpg" height="200px" alt="Product 3" class="product-image">
+                    <p class="product-description">
+                    <h3>Aditya Kumar Satapathy </h3> Reg no. 2341019349.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                line-height: 1.6;
+                background-color: #f4f7f6;
+                color: #333;
+            }
+
+
+            .row img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .section-header {
+                font-size: 2.5rem;
+                color: #007bff;
+                font-weight: bold;
+                margin-bottom: 30px;
+            }
+
+            .section-subheader {
+                font-size: 1.2rem;
+                color: #5c6b73;
+                font-weight: normal;
+            }
+
+            .container {
+                padding: 50px 15px;
+            }
+
+            /* About Section Styles */
+            #about {
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                padding: 30px;
+            }
+
+            #about h3 {
+                color: #007bff;
+            }
+
+            #about img {
+                border-radius: 8px;
+                max-width: 100%;
+                height: auto;
+            }
+
+            #about ul {
+                list-style-type: none;
+                padding: 0;
+                margin-top: 20px;
+            }
+
+            #about ul li {
+                font-size: 1.1rem;
+                color: #333;
+                padding-left: 20px;
+                position: relative;
+            }
+
+            #about ul li:before {
+                content: '✔';
+                position: absolute;
+                left: 0;
+                color: #28a745;
+            }
+
+            /* Values Section Styles */
+            #values {
+                background-color: #f9f9f9;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                padding: 30px;
+            }
+
+            .values-card {
+                margin: 20px 0;
+            }
+
+            #values .col-md-4 {
+                padding: 20px;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            #values .col-md-4:hover {
+                transform: translateY(-10px);
+            }
+
+            #values i {
+                color: #007bff;
+            }
+
+            #values h4 {
+                color: #007bff;
+                margin-top: 15px;
+            }
+
+            #values p {
+                font-size: 1rem;
+                color: #555;
+            }
+
+            /* Testimonials Section Styles */
+            #testimonials {
+                background-color: #fff;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            #testimonials .testimonial {
+                background-color: #f8f9fa;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                margin-bottom: 20px;
+                transition: all 0.3s ease;
+            }
+
+            #testimonials .testimonial:hover {
+                background-color: #e9ecef;
+            }
+
+            #testimonials p {
+                font-size: 1.1rem;
+                color: #555;
+                font-style: italic;
+            }
+
+            #testimonials strong {
+                font-weight: bold;
+                color: #007bff;
+            }
+
+            /* Team Section Styles */
+            #team {
+                background-color: #f9f9f9;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .team-member img {
+                border-radius: 10%;
+                max-width: 150px;
+                height: 150px;
+                object-fit: cover;
+            }
+
+            #team h5 {
+                margin-top: 15px;
+                color: #007bff;
+            }
+
+            #team p {
+                font-size: 1rem;
+                color: #555;
+            }
+
+            /* Hover effect for Team members */
+            .team-member {
+                margin-bottom: 20px;
+                transition: transform 0.3s ease;
+            }
+            .team-member:hover {
+                transform: translateY(-10px);
+            }
+        </style>
+        <!-- Footer -->
+        <footer>
+            <h3 style="color: #ddd;"> &copy; 2024 Vehicle Reservation System CSW Project. All Rights Reserved.</h3>
+        </footer>
+    </body>
+</html>
